@@ -14,8 +14,8 @@ const dishuisms = [
 ];
 
 const photos = [
-  { src: "./media/p01.webp", alt: "A heart made over a late-night video call", className: "wide", caption: "Lpondi roadtripphya" },
-  { src: "./media/p02.webp", alt: "Dishu making a funny face at lunch", className: "tall", caption: "" },
+  { src: "./media/p01.webp", alt: "A heart made over a late-night video call", className: "wide", caption: "LD" },
+  { src: "./media/p02.webp", alt: "Dishu making a funny face at lunch", className: "tall", caption: "Onam Sadhya" },
   { src: "./media/p03.webp", alt: "Dishu among flowers and old architecture", className: "wide", caption: "in the wilddd" },
   { src: "./media/p04.webp", alt: "Dishu curled up at the airport", className: "tall", caption: "eepy w plushie" },
   { src: "./media/p05.webp", alt: "Dishu asleep beside Ronald McDonald", className: "tall", caption: "Mc Drunk" },
