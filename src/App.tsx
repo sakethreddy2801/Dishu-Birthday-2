@@ -14,29 +14,29 @@ const dishuisms = [
 ];
 
 const photos = [
-  { src: "./media/p01.webp", alt: "A heart made over a late-night video call", className: "wide" },
-  { src: "./media/p02.webp", alt: "Dishu making a funny face at lunch", className: "tall" },
-  { src: "./media/p03.webp", alt: "Dishu among flowers and old architecture", className: "wide" },
-  { src: "./media/p04.webp", alt: "Dishu curled up at the airport", className: "tall" },
-  { src: "./media/p05.webp", alt: "Dishu asleep beside Ronald McDonald", className: "tall" },
-  { src: "./media/p06.webp", alt: "Dishu hanging out with three dogs", className: "wide" },
-  { src: "./media/p07.webp", alt: "A quiet kiss at home", className: "wide" },
-  { src: "./media/p08.webp", alt: "A candid moment in the car", className: "tall" },
-  { src: "./media/p09.webp", alt: "A strip of photo-booth memories", className: "tall" },
-  { src: "./media/p10.webp", alt: "A playful selfie together", className: "tall" },
-  { src: "./media/p11.webp", alt: "Dishu wearing a tiny plush octopus", className: "tall" },
-  { src: "./media/p12.webp", alt: "Dishu behind the wheel under colourful lights", className: "tall" },
-  { src: "./media/p13.webp", alt: "Getting ready together in the mirror", className: "tall" },
-  { src: "./media/p14.webp", alt: "Dishu asking a giant dog for a kiss", className: "tall" },
-  { src: "./media/p15.webp", alt: "Dishu leaning against the M2", className: "tall" },
-  { src: "./media/p16.webp", alt: "Dishu and her giant black dog", className: "tall" },
-  { src: "./media/p17.webp", alt: "A shopping selfie after training", className: "tall" },
-  { src: "./media/p18.webp", alt: "A golden mirror photo together", className: "wide" },
-  { src: "./media/p19.webp", alt: "Dishu posing with her sleepy blue plush", className: "tall" },
-  { src: "./media/p20.webp", alt: "A night out together", className: "tall" },
-  { src: "./media/p21.webp", alt: "A matching floral photo together", className: "tall" },
-  { src: "./media/p22.webp", alt: "A mirror selfie together", className: "tall" },
-  { src: "./media/p23.webp", alt: "A sunny drive together", className: "wide" },
+  { src: "./media/p01.webp", alt: "A heart made over a late-night video call", className: "wide", caption: "Lpondi roadtripphya" },
+  { src: "./media/p02.webp", alt: "Dishu making a funny face at lunch", className: "tall", caption: "" },
+  { src: "./media/p03.webp", alt: "Dishu among flowers and old architecture", className: "wide", caption: "in the wilddd" },
+  { src: "./media/p04.webp", alt: "Dishu curled up at the airport", className: "tall", caption: "eepy w plushie" },
+  { src: "./media/p05.webp", alt: "Dishu asleep beside Ronald McDonald", className: "tall", caption: "Mc Drunk" },
+  { src: "./media/p06.webp", alt: "Dishu hanging out with three dogs", className: "wide", caption: "DA OTHER DAWGSS" },
+  { src: "./media/p07.webp", alt: "A quiet kiss at home", className: "wide", caption: "BAYBEEE?" },
+  { src: "./media/p08.webp", alt: "A candid moment in the car", className: "tall", caption: "Fuppie treatment" },
+  { src: "./media/p09.webp", alt: "A strip of photo-booth memories", className: "tall", caption: "Photo boof" },
+  { src: "./media/p10.webp", alt: "A playful selfie together", className: "tall", caption: "deepavaliii" },
+  { src: "./media/p11.webp", alt: "Dishu wearing a tiny plush octopus", className: "tall", caption: "Dishie & Plushie" },
+  { src: "./media/p12.webp", alt: "Dishu behind the wheel under colourful lights", className: "tall", caption: "m340i" },
+  { src: "./media/p13.webp", alt: "Getting ready together in the mirror", className: "tall", caption: "eye liner" },
+  { src: "./media/p14.webp", alt: "Dishu asking a giant dog for a kiss", className: "tall", caption: "da big black dawgg" },
+  { src: "./media/p15.webp", alt: "Dishu leaning against the M2", className: "tall", caption: "m2 album cover" },
+  { src: "./media/p16.webp", alt: "Dishu and her giant black dog", className: "tall", caption: "da black dawggg pt.2" },
+  { src: "./media/p17.webp", alt: "A shopping selfie after training", className: "tall", caption: "shoooopwing" },
+  { src: "./media/p18.webp", alt: "A golden mirror photo together", className: "wide", caption: "secret stowiees" },
+  { src: "./media/p19.webp", alt: "Dishu posing with her sleepy blue plush", className: "tall", caption: "dishie & plushie pt.2" },
+  { src: "./media/p20.webp", alt: "A night out together", className: "tall", caption: "22 b'day" },
+  { src: "./media/p21.webp", alt: "A matching floral photo together", className: "tall", caption: "half decent photo" },
+  { src: "./media/p22.webp", alt: "A mirror selfie together", className: "tall", caption: "mirror selfieee" },
+  { src: "./media/p23.webp", alt: "A sunny drive together", className: "wide", caption: "pondi roadtripp" },
 ];
 
 function Sparkles({ burst = false }: { burst?: boolean }) {
@@ -343,7 +343,7 @@ export default function Home() {
           {photos.map((photo, index) => (
             <button className={`memory ${photo.className}`} key={photo.src} onClick={() => setLightbox(index)} aria-label={`Open photo ${index + 1}: ${photo.alt}`} data-reveal="up" style={{ "--reveal-delay": `${(index % 4) * 55}ms` } as React.CSSProperties}>
               <img src={photo.src} alt={photo.alt} loading="lazy" />
-              <span>{String(index + 1).padStart(2, "0")}</span>
+              <span className="memory-caption"><b>{photo.caption}</b><i>{String(index + 1).padStart(2, "0")}</i></span>
             </button>
           ))}
         </div>
