@@ -177,8 +177,9 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--yellow); outlin
 .memory:hover { translate: 0 -5px; box-shadow: 0 20px 38px rgba(31,48,88,.18), 0 3px 7px rgba(31,48,88,.1); }
 .memory:hover img { transform: scale(1.045); filter: saturate(1.08); }
 .memory:active img { transform: scale(1.015); }
-.memory span { position: absolute; right: 15px; bottom: 11px; display: flex; align-items: baseline; gap: 5px; width: auto; height: auto; background: transparent; color: var(--ink-soft); font-family: Georgia, serif; font-size: 14px; font-style: italic; font-weight: 700; }
-.memory span::before { content: "MEMORY"; font-family: Inter, sans-serif; font-size: 8px; font-style: normal; font-weight: 900; letter-spacing: .14em; }
+.memory-caption { position: absolute; right: 15px; bottom: 11px; left: 15px; display: flex; align-items: flex-end; justify-content: space-between; gap: 8px; color: var(--ink-soft); }
+.memory-caption b { min-width: 0; font-family: Inter, sans-serif; font-size: 9px; font-weight: 850; letter-spacing: .035em; line-height: 1.05; }
+.memory-caption i { margin-left: auto; font-family: Georgia, serif; font-size: 14px; font-weight: 700; }
 
 .final-note { display: grid; grid-template-columns: 1fr 1fr; min-height: 760px; background: radial-gradient(circle at 15% 15%, rgba(255,255,255,.55), transparent 23%), linear-gradient(135deg, #9dd9ff, #c4d6ff 65%, #d1ccff); border-top: 2px solid var(--ink); }
 .note-card { display: flex; flex-direction: column; justify-content: center; padding: 80px max(34px, calc((100vw - 1280px) / 2)); padding-right: 70px; }
@@ -283,8 +284,9 @@ section[id] { scroll-margin-top: 92px; }
   .memory, .memory.wide { grid-column: span 1; height: 260px; padding: 7px 7px 34px; box-shadow: 0 9px 20px rgba(31,48,88,.13), 0 2px 4px rgba(31,48,88,.08); }
   .memory:nth-child(5n + 1) { height: 360px; }
   .memory:nth-child(3n) { grid-column: 1 / -1; height: 310px; }
-  .memory span { right: 11px; bottom: 8px; font-size: 12px; }
-  .memory span::before { font-size: 7px; }
+  .memory-caption { right: 11px; bottom: 8px; left: 11px; gap: 5px; }
+  .memory-caption b { font-size: 8px; letter-spacing: 0; }
+  .memory-caption i { font-size: 12px; }
   .final-note { grid-template-columns: 1fr; }
   .note-card { padding: 75px 24px 70px; }
   .note-card > p:not(.eyebrow) { font-size: 16px; line-height: 1.74; }
